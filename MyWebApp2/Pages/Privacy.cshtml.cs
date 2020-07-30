@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace MyWebApp2.Pages
 {
@@ -14,6 +15,8 @@ namespace MyWebApp2.Pages
 
         public void OnGet()
         {
+            string dateTime = DateTime.Now.ToShortDateString();
+            ViewData["TimeStamp"] = dateTime;
         }
     }
 }
